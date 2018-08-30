@@ -1,30 +1,13 @@
 <template>
   <div id="app">
-    <van-cell-group class="item-list">
-      <van-cell is-link icon="points" title="我的积分" />
-      <van-cell is-link icon="gift" title="我收到的礼物" />
-    </van-cell-group>
+    <router-view class="view-router"></router-view> 
+    <router-view name="footer"></router-view>
   </div>
 </template>
 
 <script>
-import { Cell, CellGroup, Icon } from 'vant';
-
-export default {
-  components: {
-    [Cell.name]: Cell,
-    [CellGroup.name]: CellGroup,
-    [Icon.name]: Icon
-  }
-};
+export default {};
 </script>
 
 <style>
-body {
-  background-color: #f8f8f8;
-}
-
-.van-cell__title .van-icon {
-  font-size: 18px;
-}
 </style>
