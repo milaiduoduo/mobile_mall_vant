@@ -1,5 +1,25 @@
 body {
   margin: 0;
   height: 100%;
-  font-size: 14px;
+  font-size: 16px;
+}
+
+img {
+  vertical-align: top;
+}
+
+.left {
+  float: left;
+  // background: pink;
+}
+
+.right {
+  float: right;
+  // background: cadetblue;
+}
+
+.clearf:after {
+  content: '';
+  height: 0;
+  clear: both;
 }

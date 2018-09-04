@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import home from '@/components/home';
 import footer from '@/components/footer';
+import homePage from '@/views/homePage';
 
 Vue.use(VueRouter);
 let router = new VueRouter({
@@ -10,6 +10,7 @@ let router = new VueRouter({
     path: "/",
     name: "home",
     components: {
+      default: homePage,
       footer: footer
     }
   }, {
