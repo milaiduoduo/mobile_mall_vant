@@ -7,7 +7,7 @@
                 @click="categoryClick(index)">item.name</li>
             </ul>
         </div>
-        <div class="treeContent right"></div>
+        <div class="treeContent"></div>
     </div>
 </template>
 
@@ -25,5 +25,18 @@ export default {
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss">
+.wrap {
+  height: 100%;
+  .itemTree {
+    width: 100px;
+    height: 100%;
+    background: cadetblue;
+  }
+  .treeContent {
+    height: 100%;
+    margin-left: 100px;
+    background: pink;
+  }
+}
 </style>
 
