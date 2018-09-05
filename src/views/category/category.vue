@@ -4,17 +4,30 @@
             <van-search placeholder="请输入分类名称"></van-search>
             <div class="searchMask" @click="$router.push({name:'itemSearch'})"></div>
         </div>
-        <category-tree></category-tree>
+        <category-tree :categorys="categorys"></category-tree>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
 import { Search } from "vant";
-import CategoryTree from "@/components/categoryTree";
+import CategoryTree from "@/components/categoryTree/categoryTree";
 export default {
   components: {
     [Search.name]: Search,
     "category-tree": CategoryTree
+  },
+  data() {
+    return {
+      categorys: [
+        { name: "短T恤" },
+        { name: "短裤" },
+        { name: "凉鞋" },
+        { name: "长袖T恤" },
+        { name: "外套" },
+        { name: "长裤" },
+        { name: "运动鞋" }
+      ]
+    };
   }
 };
 </script>
