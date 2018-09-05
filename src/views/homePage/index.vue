@@ -2,17 +2,20 @@
     <div>
         <v-ad-board :adUrl="shopInfo.imgUrl" :shopName="shopInfo.shopName"></v-ad-board>  
         <v-ad-shop-info></v-ad-shop-info>
+        <v-item-group></v-item-group>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
 import ADBoard from "./adBorad.vue";
 import ADShopInfo from "./adShopInfo.vue";
+import ItemGroup from "@/components/itemGroup";
 export default {
   name: "homePage",
   components: {
     "v-ad-board": ADBoard,
-    "v-ad-shop-info": ADShopInfo
+    "v-ad-shop-info": ADShopInfo,
+    "v-item-group": ItemGroup
   },
   created() {},
   data() {

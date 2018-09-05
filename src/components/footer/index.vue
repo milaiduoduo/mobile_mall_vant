@@ -3,7 +3,7 @@
         <van-tabbar-item class="item" v-for="(tab,index) in tabbar"
         :key="index"
         :icon="tab.icon"
-        :to="{path:'/'}"
+        :to="{path:tab.path}"
         :dot="tab.dot"
         :info="tab.info">
         {{tab.name}}
@@ -28,8 +28,8 @@ export default {
         },
         {
           name: "分类",
-          path: "/items",
-          pathName: "class",
+          path: "/category",
+          pathName: "category",
           icon: "class-full",
           dot: false,
           info: ""
