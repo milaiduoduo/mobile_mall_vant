@@ -3,6 +3,7 @@
         <div class="itemTree left">
             <ul>
                 <li v-for="(item,index) in categorys" :key=index
+               class="border-1px"
                 :class="{active_category:categoryActive==index}"
         @click="categoryClick(index)">{{item.name}}</li>
             </ul>
@@ -104,6 +105,7 @@ export default {
 
 <style scoped lang="scss" rel="stylesheet/scss">
 @import "../../assets/scss/var";
+@import "../../assets/scss/mixin/border-1px.scss";
 .wrap {
   height: 100%;
 }
@@ -116,6 +118,8 @@ export default {
     line-height: 40px;
     text-align: center;
     border-left: 2px solid $bg-color;
+    @include border-1px($main-color);
+    // border-bottom: 1px solid $main-color;
   }
   li.active_category {
     background: $white;
