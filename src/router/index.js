@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import footer from '@/components/footer';
-import homePage from '@/views/homePage';
+import homePage from '@/views/homePage/home';
 import category from '@/views/category/category';
 
 const itemSearch = () =>

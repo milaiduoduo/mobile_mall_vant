@@ -42,7 +42,7 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach((to, from) => {
-  Toast.clear(clearAll);
+  // Toast.clearAll();
 })
 
 
