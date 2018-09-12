@@ -4,7 +4,7 @@
         :adUrl="shopInfo.imgUrl" :shopName="shopInfo.shopName">
         </v-ad-board>  
         <v-ad-shop-info></v-ad-shop-info>
-        <van-list 
+        <van-list  
          v-model="loading" :finished="finished"
          :offset="100"
          >
