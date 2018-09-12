@@ -7,7 +7,7 @@
                 </template>
                 <template slot="title">
                     <span class="group_title">{{group.title}}</span>
-                    <span class="more">查看更多...</span>
+                    <span class="more">查看更多<van-icon name="arrow"></van-icon></span>
                 </template>
             </van-cell>
         </van-cell-group>
@@ -41,7 +41,7 @@ export default {
     }
   },
   mounted() {
-    console.log("group:", this.group);
+    // console.log("group:", this.group);
   }
 };
 </script>

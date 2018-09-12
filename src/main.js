@@ -5,6 +5,8 @@ import router from './router/index';
 import '@/assets/scss/iconfont/iconfont.css';
 import './assets/scss/global.scss';
 
+import axios from '@/assets/js/axios.js';
+
 import {
   Waterfall,
   Lazyload,
@@ -15,8 +17,15 @@ import {
   CellGroup,
   Field,
   Icon,
-  Button
+  Button,
+  Popup,
+  loading,
+  List,
+  PullRefresh
 } from 'vant';
+
+//plugins
+Vue.use(axios);
 
 Vue.use(Waterfall);
 Vue.use(Lazyload);
@@ -28,6 +37,10 @@ Vue.use(CellGroup);
 Vue.use(Field);
 Vue.use(Icon);
 Vue.use(Button);
+Vue.use(Popup);
+Vue.use(loading);
+Vue.use(List);
+Vue.use(PullRefresh);
 
 Toast.setDefaultOptions({
   duration: 1000
