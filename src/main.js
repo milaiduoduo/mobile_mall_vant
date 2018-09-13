@@ -49,7 +49,7 @@ Toast.setDefaultOptions({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log("beforeEach");
+  console.log("beforeEach to,from:", to, from);
   Toast.loading({
     mask: true
   });

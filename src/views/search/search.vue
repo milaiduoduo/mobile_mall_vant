@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form action="/">
+        <form action="" @submit="_disabledSubmit">
             <van-search placeholder="请输入商品名称" autofocus @search="_searchClick" v-model="searchWord"></van-search>
         </form>
         <section class="hotWord">
@@ -34,9 +34,15 @@ export default {
     };
   },
   methods: {
-    _searchClick() {},
+    _searchClick() {
+      console.log("in");
+      this.$router.push({ name: "itemSearchResult" });
+    },
     _cleanHistory() {},
-    _deleteHisItem() {}
+    _deleteHisItem() {},
+    _disabledSubmit() {
+      return false;
+    }
   },
   mounted() {
     this.historyList = his_item;

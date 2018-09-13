@@ -9,6 +9,8 @@ import test from '@/views/test';
 
 const itemSearch = () =>
   import('@/views/search/search');
+const itemSearchResult = () =>
+  import('@/views/itemSearchResult/itemSearchResult');
 
 Vue.use(VueRouter);
 let router = new VueRouter({
@@ -36,6 +38,11 @@ let router = new VueRouter({
       path: "/itemSearch",
       name: "itemSearch",
       component: itemSearch
+    },
+    {
+      path: "/itemSearch/result",
+      name: "itemSearchResult",
+      component: itemSearchResult
     }
     // , {
     //   path: '*',
