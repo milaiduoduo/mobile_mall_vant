@@ -8,7 +8,7 @@ import category from '@/views/category/category';
 import test from '@/views/test';
 
 const itemSearch = () =>
-  import('@/components/search');
+  import('@/views/search/search');
 
 Vue.use(VueRouter);
 let router = new VueRouter({

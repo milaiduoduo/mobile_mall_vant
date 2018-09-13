@@ -21,7 +21,8 @@ import {
   Popup,
   loading,
   List,
-  PullRefresh
+  PullRefresh,
+  Search
 } from 'vant';
 
 //plugins
@@ -41,6 +42,7 @@ Vue.use(Popup);
 Vue.use(loading);
 Vue.use(List);
 Vue.use(PullRefresh);
+Vue.use(Search);
 
 Toast.setDefaultOptions({
   duration: 1000

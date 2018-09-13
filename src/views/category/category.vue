@@ -1,19 +1,16 @@
 <template>
     <div class="wrap">
-        <div class="searchWrap">
-            <van-search placeholder="请输入分类名称"></van-search>
-            <div class="searchMask" @click="$router.push({name:'itemSearch'})"></div>
-        </div>
+        <search-head></search-head>
         <category-tree :categorys="categorys"></category-tree>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
-import { Search } from "vant";
+import searchHead from "@/components/searchHead/searchHead";
 import CategoryTree from "@/components/categoryTree/categoryTree";
 export default {
   components: {
-    [Search.name]: Search,
+    "search-head": searchHead,
     "category-tree": CategoryTree
   },
   data() {
@@ -33,15 +30,5 @@ export default {
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss">
-.searchWrap {
-  position: relative;
-  .searchMask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
 </style>
 
