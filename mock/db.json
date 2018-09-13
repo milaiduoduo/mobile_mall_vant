@@ -452,6 +452,65 @@
       }
     ]
   },
+  "searchGoods": {
+    "data": {
+      "items": [{
+          "itemUrl": " //img12.360buyimg.com/n1/jfs/t23533/332/2576401802/67260/63e371d9/5b87c12dNba2bc3a0.jpg",
+          "title": "最爱凉鞋1",
+          "price": "99",
+          "comments": "1000"
+        },
+        {
+          "itemUrl": "//img12.360buyimg.com/n1/jfs/t23533/332/2576401802/67260/63e371d9/5b87c12dNba2bc3a0.jpg",
+          "title": "最爱凉鞋2",
+          "price": "99",
+          "comments": "1000"
+        },
+        {
+          "itemUrl": "//img12.360buyimg.com/n1/jfs/t23533/332/2576401802/67260/63e371d9/5b87c12dNba2bc3a0.jpg",
+          "title": "最爱凉鞋3",
+          "price": "99",
+          "comments": "1000"
+        },
+        {
+          "itemUrl": "//img12.360buyimg.com/n1/jfs/t23533/332/2576401802/67260/63e371d9/5b87c12dNba2bc3a0.jpg",
+          "title": "最爱凉鞋4",
+          "price": "99",
+          "comments": "1000"
+        },
+        {
+          "itemUrl": "//img12.360buyimg.com/n1/jfs/t23533/332/2576401802/67260/63e371d9/5b87c12dNba2bc3a0.jpg",
+          "title": "最爱凉鞋5",
+          "price": "99",
+          "comments": "1000"
+        },
+        {
+          "itemUrl": "//img12.360buyimg.com/n1/jfs/t23533/332/2576401802/67260/63e371d9/5b87c12dNba2bc3a0.jpg",
+          "title": "最爱凉鞋6",
+          "price": "99",
+          "comments": "1000"
+        },
+        {
+          "itemUrl": "//img12.360buyimg.com/n1/jfs/t23533/332/2576401802/67260/63e371d9/5b87c12dNba2bc3a0.jpg",
+          "title": "最爱凉鞋7",
+          "price": "99",
+          "comments": "1000"
+        },
+        {
+          "itemUrl": "//img12.360buyimg.com/n1/jfs/t23533/332/2576401802/67260/63e371d9/5b87c12dNba2bc3a0.jpg",
+          "title": "最爱凉鞋8",
+          "price": "99",
+          "comments": "1000"
+        }
+      ],
+      "page": {
+        "totalCount": 38,
+        "pageCount": 5,
+        "currentPage": 1,
+        "perPage": 8
+      }
+    }
+  },
   "moreGoods": {
     "data": {
       "items": [{

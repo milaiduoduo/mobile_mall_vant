@@ -40,7 +40,7 @@ let router = new VueRouter({
       component: itemSearch
     },
     {
-      path: "/itemSearch/result",
+      path: "/itemSearchResult",
       name: "itemSearchResult",
       component: itemSearchResult
     }
