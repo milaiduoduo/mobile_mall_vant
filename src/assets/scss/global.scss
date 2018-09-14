@@ -1,6 +1,13 @@
 @import './var';
 @import './mix';
 
+$ue-width:750;
+
+@function px2rem($px) {
+  @return ($px/$ue-width*10)rem
+}
+
+
 html {
   height: 100%;
 }
@@ -8,7 +15,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-size: 16px;
+  font-size: $font-size-normal;
 }
 
 img {

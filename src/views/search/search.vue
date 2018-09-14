@@ -62,7 +62,7 @@ export default {
   background: $white;
   .title {
     display: block;
-    font-size: 18px;
+    font-size: $font-size-normal;
     padding-bottom: 15px;
   }
 }
@@ -96,7 +96,7 @@ export default {
   }
   .clean {
     display: block;
-    font-size: 18px;
+    font-size: $font-size-normal;
     text-align: center;
     margin-top: 15px;
     color: $main-color-light;

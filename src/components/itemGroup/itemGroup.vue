@@ -58,7 +58,7 @@ export default {
 }
 .van-icon,
 .van-cell {
-  font-size: 18px;
+  font-size: $font-size-normal;
 }
 .van-cell {
   position: relative;
@@ -67,7 +67,7 @@ export default {
 .more {
   position: absolute;
   right: 10px;
-  font-size: 16px;
+  font-size: $font-size-normal;
   color: $more-common;
 }
 .itemWrap {

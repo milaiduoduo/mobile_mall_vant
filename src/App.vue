@@ -10,4 +10,7 @@ export default {};
 </script>
 
 <style>
+#app{
+  font-size:.32rem;
+}
 </style>

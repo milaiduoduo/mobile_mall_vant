@@ -62,10 +62,11 @@ export default {
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss">
+@import "../../assets/scss/var";
 .wrap {
   z-index: 999;
   .item {
-    font-size: 14px;
+    font-size: $font-size-small;
   }
 }
 </style>
