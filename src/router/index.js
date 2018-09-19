@@ -11,6 +11,12 @@ const itemSearch = () =>
   import('@/views/search/search');
 const itemSearchResult = () =>
   import('@/views/itemSearchResult/itemSearchResult');
+const userCenter = () =>
+  import("@/views/user/tabbar-user");
+const userInfomation = () =>
+  import("@/views/user/user-info");
+const login = () =>
+  import("@/views/login/login");
 
 Vue.use(VueRouter);
 let router = new VueRouter({
@@ -43,6 +49,21 @@ let router = new VueRouter({
       path: "/itemSearchResult",
       name: "itemSearchResult",
       component: itemSearchResult
+    },
+    {
+      path: "/userCenter",
+      name: "userCenter",
+      component: userCenter
+    },
+    {
+      path: "/userCenter/userInfomation",
+      name: "userInfomation",
+      component: userInfomation
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: login
     }
     // , {
     //   path: '*',

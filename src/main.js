@@ -4,6 +4,8 @@ import router from './router/index';
 
 import '@/assets/scss/iconfont/iconfont.css';
 import './assets/scss/global.scss';
+// import './assets/scss/mix.scss';
+// import './assets/scss/var.scss';
 
 import axios from '@/assets/js/axios.js';
 

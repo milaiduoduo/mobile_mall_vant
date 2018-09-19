@@ -44,8 +44,8 @@ export default {
         },
         {
           name: "我的",
-          path: "/user",
-          pathName: "user",
+          path: "/userCenter",
+          pathName: "userCenter",
           icon: "wode",
           dot: false,
           info: ""

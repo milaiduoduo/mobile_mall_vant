@@ -13,3 +13,11 @@ $more-common:$gray-dark;
 $font-size-small:.32rem;
 $font-size-normal:.37rem;
 $font-size-big:.43rem;
+
+
+//
+$ue-width:750;
+
+@function px2rem($px) {
+  @return ($px/$ue-width*10)*1rem
+}

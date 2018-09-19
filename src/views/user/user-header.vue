@@ -1,0 +1,55 @@
+<template>
+    <div class="wrap" :style="{backgroundImage:`url(${backgroundImg})`}">
+        <van-icon class="icon" name="set" @click="toSetting"></van-icon>
+        <div class="user_avatar">
+            <img :src="avatarImg" alt="" @click="imgClick" width="55" height="55">
+        </div>
+    </div>
+</template>
+
+<script type="text/ecmascript-6">
+import avatarImg_default from "@/assets/images/avatar_default.png";
+import bg_default from "@/assets/images/user_head_bg.png";
+export default {
+  name: "user-header",
+  data() {
+    return {
+      backgroundImg: bg_default,
+      avatarImg: avatarImg_default
+    };
+  },
+  methods: {
+    toSetting() {
+      //   this.$router.push({name:""})
+    },
+    imgClick() {
+      // this.$router.push()
+    }
+  }
+};
+</script>
+
+<style scoped lang="scss" rel="stylesheet/scss">
+@import "../../assets/scss/var";
+.wrap {
+  height: px2rem(260);
+  line-height: px2rem(260);
+  text-align: center;
+  background-repeat: no-repeat;
+  .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: px2rem(48);
+  }
+  .user_avatar {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: px2rem(20);
+    img {
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+  }
+}
+</style>

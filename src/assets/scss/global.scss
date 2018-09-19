@@ -1,11 +1,11 @@
 @import './var';
-@import './mix';
+// @import './mix';
 
-$ue-width:750;
+// $ue-width:750;
 
-@function px2rem($px) {
-  @return ($px/$ue-width*10)rem
-}
+// @function px2rem($px) {
+//   @return ($px/$ue-width*10)rem
+// }
 
 
 html {
