@@ -55,6 +55,21 @@ router.beforeEach((to, from, next) => {
   Toast.loading({
     mask: true
   });
+  let Authorization = "aa",
+    user_id = "1001";
+  if (!Authorization && !user_id) {
+    if (to.meta.needLogin) {
+      console.log("in needLogin!!!!");
+      router.push({
+        name: 'login',
+        query: {
+          redirect: to.name
+        }
+      });
+      return;
+    }
+  }
+
   next();
 })
 

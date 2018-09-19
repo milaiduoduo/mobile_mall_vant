@@ -58,7 +58,11 @@ let router = new VueRouter({
     {
       path: "/userCenter/userInfomation",
       name: "userInfomation",
-      component: userInfomation
+      component: userInfomation,
+      meta: {
+        needLogin: true
+      }
+
     },
     {
       path: "/login",

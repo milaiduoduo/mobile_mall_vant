@@ -20,10 +20,10 @@ export default {
   },
   methods: {
     toSetting() {
-      //   this.$router.push({name:""})
+      this.$router.push({ name: "userInfomation" });
     },
     imgClick() {
-      // this.$router.push()
+      this.$router.push({ name: "userInfomation" });
     }
   }
 };
