@@ -5,7 +5,7 @@ import footer from '@/components/footer';
 import homePage from '@/views/homePage/home';
 import category from '@/views/category/category';
 
-import test from '@/views/test';
+import test from '@/views/test/test';
 
 const itemSearch = () =>
   import('@/views/search/search');
@@ -17,11 +17,18 @@ const userInfomation = () =>
   import("@/views/user/user-info");
 const login = () =>
   import("@/views/login/login");
+//--------------------------------
+const testAttr = () =>
+  import("@/views/test/testAttrsListeners/parent");
 
 Vue.use(VueRouter);
 let router = new VueRouter({
   mode: "history",
   routes: [{
+      path: "/test_attr_listener",
+      component: testAttr
+    },
+    {
       path: "/test",
       name: "test",
       component: test
