@@ -37,7 +37,38 @@ export default {
     clearText() {
       this.account = "";
     },
-    loginSubmit() {}
+    loginSubmit() {
+      this.isLoging = true;
+
+      this.$reqGet("/user-login")
+        .then(res => {
+          // setTimeout(() => {
+          console.log("登录成功返回：", res);
+          //将access_token存在本地
+          localStorage.setItem("Authorization", res.data.data.access_token);
+          //继续请求用户信息
+          return this.$reqGet("/user-profile");
+          // }, 3000);
+        })
+        .then(res => {
+          this.isLoging = false;
+          const localData = res.data.data;
+          console.log("请求用户信息返回：", res.data.data);
+          //将必要的用户信息存放到本地存储
+          localStorage.setItem("user_id", res.data.data.user_id);
+          //页面跳转
+          const redirect = this.$route.query.redirect || "home";
+          console.log("redirect:", redirect);
+          this.$router.replace({
+            name: redirect,
+            query: this.$route.query
+          });
+        })
+        .catch(err => {
+          console.log("login err: ", err);
+          this.isLoging = false;
+        });
+    }
   }
 };
 </script>

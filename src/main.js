@@ -58,6 +58,8 @@ router.beforeEach((to, from, next) => {
 
   let Authorization = "",
     user_id = "";
+  Authorization = localStorage.getItem("Authorization");
+  user_id = localStorage.getItem("user_id");
   if (!Authorization && !user_id) {
     //没登陆的情况下，判断某页面是否需要登录才能访问。如果是，则跳转到登录页。
     if (to.meta.needLogin) {
