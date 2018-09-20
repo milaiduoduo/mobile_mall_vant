@@ -16,9 +16,10 @@ const getLocalStorages = (...objs) => {
   return storage;
 }
 
-const removeLocalStorage = (...objs) => {
-  for (let obj in objs) {
-    window.localStorage.removeItem(obj);
+const removeLocalStorage = (...args) => {
+  console.log("localstorage name: ", args);
+  for (let keyName of args) {
+    window.localStorage.removeItem(keyName);
   }
 }
 

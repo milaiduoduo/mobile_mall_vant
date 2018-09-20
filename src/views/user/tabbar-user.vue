@@ -1,7 +1,7 @@
 <template>
     <div>
         <user-header></user-header>
-        <van-button size="large">退出当前账户</van-button>
+        <van-button size="large" @click="quite">退出当前账户</van-button>
     </div>
 </template>
 
@@ -10,6 +10,19 @@ import userHeader from "./user-header.vue";
 export default {
   components: {
     [userHeader.name]: userHeader
+  },
+  methods: {
+    quite() {
+      console.log("in 退出！");
+      this.$util.removeLocalStorage(
+        "Authorization",
+        "user_id",
+        "avatar",
+        "background_imagev",
+        "nick_name"
+      );
+      this.$router.push({ name: "login" });
+    }
   }
 };
 </script>
