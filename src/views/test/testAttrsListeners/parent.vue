@@ -1,8 +1,11 @@
 <template>
-    <div>
+<div>
+    <div class="parentWrap">
         <h1>我是parent</h1>
 <child1 :a1="a1" :b1="b1"></child1>
     </div>
+</div>
+    
     
 </template>
 
