@@ -7,7 +7,9 @@ import './assets/scss/global.scss';
 // import './assets/scss/mix.scss';
 // import './assets/scss/var.scss';
 
+//plugins
 import axios from '@/assets/js/axios.js';
+import util from "@/assets/js/util.js";
 
 import {
   Waterfall,
@@ -29,6 +31,7 @@ import {
 
 //plugins
 Vue.use(axios);
+Vue.use(util);
 
 Vue.use(Waterfall);
 Vue.use(Lazyload);
@@ -51,15 +54,15 @@ Toast.setDefaultOptions({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log("beforeEach to,from:", to, from);
+  //console.log("beforeEach to,from:", to, from);
   Toast.loading({
     mask: true
   });
 
-  let Authorization = "",
-    user_id = "";
-  Authorization = localStorage.getItem("Authorization");
-  user_id = localStorage.getItem("user_id");
+  let {
+    Authorization,
+    user_id
+  } = Vue.prototype.$util.getLocalStorages("Authorization", "user_id");
   if (!Authorization && !user_id) {
     //没登陆的情况下，判断某页面是否需要登录才能访问。如果是，则跳转到登录页。
     if (to.meta.needLogin) {

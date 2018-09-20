@@ -45,7 +45,10 @@ export default {
           // setTimeout(() => {
           console.log("登录成功返回：", res);
           //将access_token存在本地
-          localStorage.setItem("Authorization", res.data.data.access_token);
+          this.$util.setLocalStorage({
+            Authorization: res.data.data.access_token
+          });
+          // localStorage.setItem("Authorization", res.data.data.access_token);
           //继续请求用户信息
           return this.$reqGet("/user-profile");
           // }, 3000);
@@ -55,7 +58,10 @@ export default {
           const localData = res.data.data;
           console.log("请求用户信息返回：", res.data.data);
           //将必要的用户信息存放到本地存储
-          localStorage.setItem("user_id", res.data.data.user_id);
+          this.$util.setLocalStorage({
+            user_id: res.data.data.user_id
+          });
+          // localStorage.setItem("user_id", res.data.data.user_id);
           //页面跳转
           const redirect = this.$route.query.redirect || "home";
           console.log("redirect:", redirect);
