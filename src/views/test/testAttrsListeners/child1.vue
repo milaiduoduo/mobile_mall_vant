@@ -23,6 +23,8 @@ export default {
   },
   mounted() {
     this.$emit("test1");
+
+    console.log("this.$listeners: ", this.$listeners);
   },
   methods: {
     onEvent3() {

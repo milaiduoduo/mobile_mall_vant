@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    let baseFontSize = document.documentElement.getBoundingClientRect().width / 15;
+    document.documentElement.style.fontSize = baseFontSize + "px";
+    console.log(baseFontSize); //37.5
+    console.log('clientWidth:', document.documentElement.clientWidth);
+
+  </script>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .dv1 {
+      /* width: 150px; */
+      width: 375px;
+      height: 375px;
+      background: cadetblue;
+    }
+
+    .dv2 {
+      width: 15rem;
+      height: 15rem;
+      background: pink;
+    }
+
+    .dv3 {
+      width: 5rem;
+      height: 5rem;
+      background: yellowgreen;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- <div class="dv1"></div> -->
+  <div class="dv2">字有好大？</div>
+  <div class="dv3">字有好大？</div>
+</body>
+
+</html>

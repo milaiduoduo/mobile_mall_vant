@@ -55,9 +55,11 @@ router.beforeEach((to, from, next) => {
   Toast.loading({
     mask: true
   });
-  let Authorization = "aa",
-    user_id = "1001";
+
+  let Authorization = "",
+    user_id = "";
   if (!Authorization && !user_id) {
+    //没登陆的情况下，判断某页面是否需要登录才能访问。如果是，则跳转到登录页。
     if (to.meta.needLogin) {
       console.log("in needLogin!!!!");
       router.push({

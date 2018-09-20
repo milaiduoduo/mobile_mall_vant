@@ -47,6 +47,9 @@ export default {
       this.messageFromC3 = msg;
       console.log("我是【parent】，这是从【child3】组件中触发【input】事件。");
     }
+  },
+  mounted() {
+    console.log("this.$listeners: ", this.$listeners);
   }
 };
 </script>
