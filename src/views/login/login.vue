@@ -11,7 +11,7 @@
         <v-field v-model="password" icon="lock" :type="visiblePass?'text':'password'" :right-icon="visiblePass?'eye-open':'eye-close'" @right-click="visiblePass =!visiblePass"></v-field>
         <div class="forgetWrap">
             <div class="left">可以用微信账号登录</div>
-            <div class="right">忘记密码</div>
+            <div class="right" @click="forgetPwd">忘记密码</div>
         </div>
         <van-button size="large" type="danger" :loading="isLoging" @click="loginSubmit">登录</van-button>  
         <div class="toRegisterWrap clearf">
@@ -84,6 +84,9 @@ export default {
           console.log("login err: ", err);
           this.isLoging = false;
         });
+    },
+    forgetPwd() {
+      this.$router.push({ name: "forgetPwd" });
     }
   }
 };

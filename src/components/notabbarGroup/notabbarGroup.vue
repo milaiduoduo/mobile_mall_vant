@@ -20,5 +20,8 @@ export default {
   padding-top: 30px;
   font-size: $font-size-normal;
   background: $white;
+  .submitBtn {
+    margin-top: px2rem(60);
+  }
 }
 </style>

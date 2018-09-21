@@ -1,6 +1,6 @@
 <template>
-<v-notabbar-group class="regSecWrap">
-    <v-field-group>
+<v-notabbar-composite-g class="regSecWrap">
+    <!-- <v-field-group> -->
         <v-field v-model="phoneNum" icon="mobile" 
             placeholder="请输入验证码"></v-field>
         <v-field v-model="password" icon="lock" :type="visiblePass?'text':'password'"           :right-icon="visiblePass?'eye-open':'eye-close'" @right-click="visiblePass =!visiblePass"
@@ -8,14 +8,13 @@
         <v-field v-model="repeatPassword" icon="lock" :type="visiblePass2?'text':'password'" :right-icon="visiblePass2?'eye-open':'eye-close'" @right-click="visiblePass2 =!visiblePass2"
             placeholder="请再次输入密码"></v-field>
         <van-button class="btnWrap" size="large" type="danger" :loading="isLoging" @click="registerSubmit">确定</van-button> 
-    </v-field-group>
-</v-notabbar-group>
+    <!-- </v-field-group> -->
+</v-notabbar-composite-g>
 </template>
 
 <script type="text/ecmascript-6">
-import vNoTabbarGroup from "@/components/notabbarGroup/notabbarGroup";
+import vNotabbarCompositeG from "@/components/notabbarCompositeG/notabbarCompositeG";
 import vField from "@/components/field/field";
-import vFieldGroup from "@/components/fieldGroup/fieldGroup";
 export default {
   name: "v-registerSec",
   data() {
@@ -30,8 +29,7 @@ export default {
   },
   components: {
     [vField.name]: vField,
-    [vFieldGroup.name]: vFieldGroup,
-    [vNoTabbarGroup.name]: vNoTabbarGroup
+    [vNotabbarCompositeG.name]: vNotabbarCompositeG
   },
   methods: {
     registerSubmit() {

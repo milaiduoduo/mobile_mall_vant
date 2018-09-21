@@ -23,6 +23,10 @@ const registerSec = () =>
   import("@/views/register/registerSec");
 const registerStatus = () =>
   import( /* webpackChunkName: "register-status" */ '@/views/register/registerStatus/');
+const forgetPwd = () =>
+  import('@/views/login/forgetPwd');
+const forgetPwdSec = () =>
+  import('@/views/login/forgetPwdSec');
 
 //-----for test---------------------------
 const testAttr = () =>
@@ -89,6 +93,16 @@ let router = new VueRouter({
       path: "/login",
       name: "login",
       component: login
+    },
+    {
+      path: "/forgetPwd",
+      name: "forgetPwd",
+      component: forgetPwd
+    },
+    {
+      path: "/forgetPwdSec",
+      name: "forgetPwdSec",
+      component: forgetPwdSec
     },
     {
       path: "/register",
