@@ -17,14 +17,28 @@ const userInfomation = () =>
   import("@/views/user/user-info");
 const login = () =>
   import("@/views/login/login");
-//--------------------------------
+const register = () =>
+  import("@/views/register/register");
+const registerSec = () =>
+  import("@/views/register/registerSec");
+const registerStatus = () =>
+  import( /* webpackChunkName: "register-status" */ '@/views/register/registerStatus/');
+
+//-----for test---------------------------
 const testAttr = () =>
   import("@/views/test/testAttrsListeners/parent");
+const testGoods = () =>
+  import("@/views/test/路由传参/params1");
+
 
 Vue.use(VueRouter);
 let router = new VueRouter({
   mode: "history",
   routes: [{
+      path: "/test/goods",
+      name: "goods",
+      component: testGoods
+    }, {
       path: "/test_attr_listener",
       component: testAttr
     },
@@ -75,6 +89,21 @@ let router = new VueRouter({
       path: "/login",
       name: "login",
       component: login
+    },
+    {
+      path: "/register",
+      name: "register",
+      component: register
+    }, {
+      path: "/register/registerSec",
+      name: "registerSec",
+      component: registerSec
+    },
+    {
+      path: "/register/registerStatus/:status",
+      name: "registerStatus",
+      props: true,
+      component: registerStatus
     }
     // , {
     //   path: '*',
