@@ -35,7 +35,7 @@ Vue.use(VueRouter);
 let router = new VueRouter({
   mode: "history",
   routes: [{
-      path: "/test/goods",
+      path: "/test/goods/:id/code/:code",
       name: "goods",
       component: testGoods
     }, {

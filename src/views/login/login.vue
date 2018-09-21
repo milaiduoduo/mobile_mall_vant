@@ -5,25 +5,33 @@
           <img src="../../assets/images/avatar_default.png" alt="头像" width="55" height="55">
         </div>
     </div>
-    <div class="formWrap">
-        <v_field v-model="account" icon="username" right-icon="clear-full" @right-click="clearText"></v_field>
+    <v-field-group class="formWrap">
+        <v-field v-model="account" icon="username" right-icon="clear-full" @right-click="clearText"></v-field>
         
-        <v_field v-model="password" icon="lock" :type="visiblePass?'text':'password'" :right-icon="visiblePass?'eye-open':'eye-close'" @right-click="visiblePass =!visiblePass"></v_field>
+        <v-field v-model="password" icon="lock" :type="visiblePass?'text':'password'" :right-icon="visiblePass?'eye-open':'eye-close'" @right-click="visiblePass =!visiblePass"></v-field>
         <div class="forgetWrap">
             <div class="left">可以用微信账号登录</div>
             <div class="right">忘记密码</div>
         </div>
-        <van-button size="large" type="danger" :loading="isLoging" @click="loginSubmit">登录</van-button>      
+        <van-button size="large" type="danger" :loading="isLoging" @click="loginSubmit">登录</van-button>  
+        <div class="toRegisterWrap clearf">
+          <span class="left">联系客服</span>
+          <router-link class="right" :to="{name:'register'}">免费注册</router-link>
+        </div>    
+    </v-field-group>
+    <div class="footerWrap">
+      <span>技术支持：火山科技</span>
     </div>
 </div>
 </template>
 
 <script type="text/ecmascript-6">
 import vField from "@/components/field/field";
-
+import vFieldGroup from "@/components/fieldGroup/fieldGroup";
 export default {
   components: {
-    [vField.name]: vField
+    [vField.name]: vField,
+    [vFieldGroup.name]: vFieldGroup
   },
   data() {
     return {
@@ -103,13 +111,6 @@ export default {
   }
 }
 .formWrap {
-  padding: 0 15px;
-  > div {
-    margin-bottom: 15px;
-    // &:last-child {
-    //   margin-bottom: 0;
-    // }
-  }
   .forgetWrap {
     overflow: hidden;
     font-size: $font-size-normal;
@@ -117,5 +118,23 @@ export default {
       color: $red;
     }
   }
+}
+.toRegisterWrap {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center;
+  color: $register-color;
+  font-size: $font-size-normal;
+  & > a {
+    color: $register-color;
+  }
+}
+.footerWrap {
+  position: absolute;
+  width: 100%;
+  bottom: px2rem(60);
+  color: $register-color;
+  text-align: center;
 }
 </style>

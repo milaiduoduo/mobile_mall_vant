@@ -5,11 +5,17 @@ $main-color-light:#a023a0;
 $gray-shallow-more: #f2f2f2;
 $gray-dark:#ccc;
 $gray-h-dark:#949292;
-$red:red;
+$gray-dark1:#999;
+$red:#db3d3c;
+$green:#06bf04;
+$fail_red:#f44;
 $black:#000;
 $bg-color: $gray-shallow-more;
 $more-common:$gray-dark;
 $border-color:$gray-dark;
+$register-color:$gray-dark1;
+$success-color:$green;
+$fail-color:$fail_red;
 
 //字体变量
 $font-size-small:.32rem;

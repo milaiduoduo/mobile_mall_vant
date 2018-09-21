@@ -6,7 +6,9 @@
       <input :type="type" :value="value" v-on="listeners" v-bind="$attrs">
     </div>
     <div>
-      <van-icon :name="rightIcon" @click="rightClick" v-show="value"></van-icon>
+      <slot name="rightContent">
+          <van-icon :name="rightIcon" @click="rightClick" v-show="value"></van-icon>
+      </slot>
     </div>
 </div>
 </div>
@@ -15,7 +17,7 @@
 
 <script type="text/ecmascript-6">
 export default {
-  name: "v_field",
+  name: "v-field",
   props: {
     icon: String,
     rightIcon: String,
@@ -56,7 +58,7 @@ export default {
   border: 1px solid $border-color;
   padding: px2rem(20) px2rem(0) px2rem(20) px2rem(0);
   box-sizing: border-box;
-  // background: red;
+  background: $white;
   > div {
     display: table-cell;
   }
