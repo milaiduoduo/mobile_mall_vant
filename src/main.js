@@ -26,13 +26,16 @@ import {
   loading,
   List,
   PullRefresh,
-  Search
+  Search,
+  Row,
+  Col
 } from 'vant';
 
 //plugins
 Vue.use(axios);
 Vue.use(util);
 
+//from vant
 Vue.use(Waterfall);
 Vue.use(Lazyload);
 Vue.use(Toast);
@@ -48,6 +51,7 @@ Vue.use(loading);
 Vue.use(List);
 Vue.use(PullRefresh);
 Vue.use(Search);
+Vue.use(Row).use(Col);
 
 Toast.setDefaultOptions({
   duration: 1000

@@ -126,7 +126,7 @@ export default {
   color: $register-color;
   font-size: $font-size-normal;
   & > a {
-    color: $register-color;
+    color: $link-color;
   }
 }
 .footerWrap {

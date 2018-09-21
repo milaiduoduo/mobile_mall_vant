@@ -78,7 +78,10 @@ let router = new VueRouter({
     {
       path: "/userCenter",
       name: "userCenter",
-      component: userCenter
+      components: {
+        default: userCenter,
+        footer: footer
+      }
     },
     {
       path: "/userCenter/userInfomation",

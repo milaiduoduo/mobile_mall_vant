@@ -1,9 +1,10 @@
 <template>
-    <div class="wrap" :style="{backgroundImage:`url(${backgroundImg})`}">
+    <div class="userHeadWrap" :style="{backgroundImage:`url(${backgroundImg})`}">
         <van-icon class="icon" name="set" @click="toSetting"></van-icon>
         <div class="user_avatar">
             <img :src="avatarImg" alt="" @click="imgClick" width="55" height="55">
         </div>
+        <div class="nickName">{{nick_name}}</div>
     </div>
 </template>
 
@@ -11,11 +12,12 @@
 import avatarImg_default from "@/assets/images/avatar_default.png";
 import bg_default from "@/assets/images/user_head_bg.png";
 export default {
-  name: "user-header",
+  name: "v-user-header",
   data() {
     return {
       backgroundImg: bg_default,
-      avatarImg: avatarImg_default
+      avatarImg: avatarImg_default,
+      nick_name: "昵称"
     };
   },
   methods: {
@@ -31,7 +33,8 @@ export default {
 
 <style scoped lang="scss" rel="stylesheet/scss">
 @import "../../assets/scss/var";
-.wrap {
+.userHeadWrap {
+  position: relative;
   height: px2rem(260);
   line-height: px2rem(260);
   text-align: center;
@@ -50,6 +53,13 @@ export default {
       vertical-align: middle;
       border-radius: 50%;
     }
+  }
+  .nickName {
+    position: absolute;
+    bottom: 10px;
+    line-height: 1;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 </style>
