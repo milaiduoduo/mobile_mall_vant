@@ -1,5 +1,5 @@
 <template>
-    <div class="regStatusWrap">
+    <v-notabbar-group class="regStatusWrap">
         <div class="contentWrap">
             <van-icon :name="statusIcon" class="icon" :class="statusClass"></van-icon>
             <div>{{statusText}}</div>
@@ -7,10 +7,11 @@
         <div class="toLoginWrap">
             <span class="time">3秒</span>后返回到登录页，您也可以<router-link to="{name:'login'}">点此登录</router-link>
         </div>
-    </div>
+    </v-notabbar-group>
 </template>
 
 <script type="text/ecmascript-6">
+import vNoTabbarGroup from "@/components/notabbarGroup/notabbarGroup";
 export default {
   data() {
     return {
@@ -31,19 +32,15 @@ export default {
   created() {
     this.isSuccess = this.$route.params.status == "success" ? true : false;
     console.log("注册状态：", this.isSuccess, this.$route.params.status);
+  },
+  components: {
+    [vNoTabbarGroup.name]: vNoTabbarGroup
   }
 };
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss">
 @import "../../assets/scss/var";
-.view-router {
-  padding-bottom: 0;
-}
-.regStatusWrap {
-  box-sizing: border-box;
-  background: $white;
-}
 .contentWrap,
 .toLoginWrap {
   text-align: center;

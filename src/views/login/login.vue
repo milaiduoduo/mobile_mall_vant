@@ -1,5 +1,5 @@
 <template>
-<div class="loginWrap">
+  <v-notabbar-group class="loginWrap">
     <div class="headerWrap">
         <div class="login_avatar">
           <img src="../../assets/images/avatar_default.png" alt="头像" width="55" height="55">
@@ -22,16 +22,18 @@
     <div class="footerWrap">
       <span>技术支持：火山科技</span>
     </div>
-</div>
+    </v-notabbar-group>
 </template>
-
 <script type="text/ecmascript-6">
+import vNoTabbarGroup from "@/components/notabbarGroup/notabbarGroup";
 import vField from "@/components/field/field";
 import vFieldGroup from "@/components/fieldGroup/fieldGroup";
+
 export default {
   components: {
     [vField.name]: vField,
-    [vFieldGroup.name]: vFieldGroup
+    [vFieldGroup.name]: vFieldGroup,
+    [vNoTabbarGroup.name]: vNoTabbarGroup
   },
   data() {
     return {
@@ -89,12 +91,6 @@ export default {
 
 <style scoped lang="scss" rel="stylesheet/scss">
 @import "../../assets/scss/var";
-.view-router {
-  padding-bottom: 0;
-}
-.loginWrap {
-  background: $white;
-}
 .headerWrap {
   height: px2rem(260);
   line-height: px2rem(260);

@@ -1,5 +1,5 @@
 <template>
-<div class="registerWrap">
+<v-notabbar-group class="registerWrap">
     <v-field-group>
     <div>我们将把验证码发送到您的手机</div>
     
@@ -14,17 +14,19 @@
     </div>
 
     </v-field-group>
-</div>
+</v-notabbar-group>
 </template>
 
 <script type="text/ecmascript-6">
+import vNoTabbarGroup from "@/components/notabbarGroup/notabbarGroup";
 import vField from "@/components/field/field";
 import vFieldGroup from "@/components/fieldGroup/fieldGroup";
 export default {
   name: "register",
   components: {
     [vField.name]: vField,
-    [vFieldGroup.name]: vFieldGroup
+    [vFieldGroup.name]: vFieldGroup,
+    [vNoTabbarGroup.name]: vNoTabbarGroup
   },
   data() {
     return {
@@ -44,14 +46,8 @@ export default {
 
 <style scoped lang="scss" rel="stylesheet/scss">
 @import "../../assets/scss/var";
-.view-router {
-  padding-bottom: 0;
-}
+
 .registerWrap {
-  box-sizing: border-box;
-  padding-top: 30px;
-  font-size: $font-size-normal;
-  background: $white;
   a {
     color: $red;
   }

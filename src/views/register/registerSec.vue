@@ -1,5 +1,5 @@
 <template>
-<div class="regSecWrap">
+<v-notabbar-group class="regSecWrap">
     <v-field-group>
         <v-field v-model="phoneNum" icon="mobile" 
             placeholder="请输入验证码"></v-field>
@@ -9,10 +9,11 @@
             placeholder="请再次输入密码"></v-field>
         <van-button class="btnWrap" size="large" type="danger" :loading="isLoging" @click="registerSubmit">确定</van-button> 
     </v-field-group>
-</div>
+</v-notabbar-group>
 </template>
 
 <script type="text/ecmascript-6">
+import vNoTabbarGroup from "@/components/notabbarGroup/notabbarGroup";
 import vField from "@/components/field/field";
 import vFieldGroup from "@/components/fieldGroup/fieldGroup";
 export default {
@@ -29,7 +30,8 @@ export default {
   },
   components: {
     [vField.name]: vField,
-    [vFieldGroup.name]: vFieldGroup
+    [vFieldGroup.name]: vFieldGroup,
+    [vNoTabbarGroup.name]: vNoTabbarGroup
   },
   methods: {
     registerSubmit() {
@@ -44,14 +46,7 @@ export default {
 
 <style scoped lang="scss" rel="stylesheet/scss">
 @import "../../assets/scss/var";
-.view-router {
-  padding-bottom: 0;
-}
 .regSecWrap {
-  box-sizing: border-box;
-  padding-top: 30px;
-  font-size: $font-size-normal;
-  background: $white;
   .btnWrap {
     margin-top: px2rem(60);
   }
