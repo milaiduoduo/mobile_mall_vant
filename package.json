@@ -11,6 +11,7 @@
     "mock": "json-server --port 4000 ./mock/db.json"
   },
   "dependencies": {
+    "@xkeshi/vue-countdown": "^1.0.1",
     "axios": "^0.18.0",
     "vant": "^1.0.1",
     "vant-css": "^1.0.1",

@@ -2,7 +2,14 @@
 <v-notabbar-composite-g class="regSecWrap">
     <!-- <v-field-group> -->
         <v-field v-model="phoneNum" icon="mobile" 
-            placeholder="请输入验证码"></v-field>
+            placeholder="请输入验证码">
+            <div slot="rightContent">
+              <countdown v-if="countingFlag" :time="60000">
+                <template slot-scope="props">{{+props.seconds||60}}秒后获取</template>
+              </countdown>
+              <span v-else>获取验证码</span>
+            </div>
+            </v-field>
         <v-field v-model="password" icon="lock" :type="visiblePass?'text':'password'"           :right-icon="visiblePass?'eye-open':'eye-close'" @right-click="visiblePass =!visiblePass"
              placeholder="请输入密码"></v-field>
         <v-field v-model="repeatPassword" icon="lock" :type="visiblePass2?'text':'password'" :right-icon="visiblePass2?'eye-open':'eye-close'" @right-click="visiblePass2 =!visiblePass2"
@@ -24,7 +31,8 @@ export default {
       repeatPassword: "",
       visiblePass: false,
       visiblePass2: false,
-      isLoging: false
+      isLoging: false,
+      countingFlag: true
     };
   },
   components: {

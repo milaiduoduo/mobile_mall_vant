@@ -10,6 +10,7 @@ import './assets/scss/global.scss';
 //plugins
 import axios from '@/assets/js/axios.js';
 import util from "@/assets/js/util.js";
+import vueCountDown from '@/assets/js/vue-countdown.js';
 
 import {
   Waterfall,
@@ -34,6 +35,7 @@ import {
 //plugins
 Vue.use(axios);
 Vue.use(util);
+Vue.use(vueCountDown);
 
 //from vant
 Vue.use(Waterfall);

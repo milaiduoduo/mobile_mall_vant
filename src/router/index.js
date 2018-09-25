@@ -33,12 +33,26 @@ const testAttr = () =>
   import("@/views/test/testAttrsListeners/parent");
 const testGoods = () =>
   import("@/views/test/路由传参/params1");
-
+const testDataComputed1 = () =>
+  import("@/views/test/data和computed/1.vue");
+const testDataComputed2 = () =>
+  import("@/views/test/data和computed/2.vue");
+const testInput = () =>
+  import("@/views/test/input/input");
 
 Vue.use(VueRouter);
 let router = new VueRouter({
   mode: "history",
   routes: [{
+      path: "/test/input",
+      component: testInput
+    }, {
+      path: "/test/dataComputed1",
+      component: testDataComputed1
+    }, {
+      path: "/test/dataComputed2",
+      component: testDataComputed2
+    }, {
       path: "/test/goods/:id/code/:code",
       name: "goods",
       component: testGoods
