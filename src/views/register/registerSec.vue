@@ -3,8 +3,8 @@
     <!-- <v-field-group> -->
         <v-field v-model="phoneNum" icon="mobile" 
             placeholder="请输入验证码">
-            <div slot="rightContent">
-              <countdown v-if="countingFlag" :time="60000">
+            <div slot="rightContent" @click="getMsgCode" class="getMsgCode">
+              <countdown v-if="countingFlag" :time="60000" @countdownend="countdownend">
                 <template slot-scope="props">{{+props.seconds||60}}秒后获取</template>
               </countdown>
               <span v-else>获取验证码</span>
@@ -32,7 +32,7 @@ export default {
       visiblePass: false,
       visiblePass2: false,
       isLoging: false,
-      countingFlag: true
+      countingFlag: false
     };
   },
   components: {
@@ -45,6 +45,12 @@ export default {
         name: "registerStatus",
         params: { status: "success" } //取值success或者fail.动态路由配置：path: "/register/registerStatus/:status",
       });
+    },
+    countdownend() {
+      this.countingFlag = false;
+    },
+    getMsgCode() {
+      this.countingFlag = true;
     }
   }
 };
@@ -55,6 +61,11 @@ export default {
 .regSecWrap {
   .btnWrap {
     margin-top: px2rem(60);
+  }
+  .getMsgCode {
+    border-left: 1px solid $border-color;
+    text-align: center;
+    color: $link-red;
   }
 }
 </style>

@@ -5,7 +5,10 @@
             <div>{{statusText}}</div>
         </div>
         <div class="toLoginWrap">
-            <span class="time">3秒</span>后返回到登录页，您也可以<router-link :to="{name:'login'}">点此登录</router-link>
+            <countdown :time="5000" class="time" @countdownend="contdownend">
+              <template slot-scope="props">{{+props.seconds||5}}秒</template>
+            </countdown>
+            后返回到登录页，您也可以<router-link :to="{name:'login'}">点此登录</router-link>
         </div>
     </v-notabbar-group>
 </template>
@@ -27,6 +30,11 @@ export default {
     },
     statusText() {
       return this.isSuccess ? "注册成功" : "注册失败";
+    }
+  },
+  methods: {
+    contdownend() {
+      this.$router.push({ name: "login" });
     }
   },
   created() {
